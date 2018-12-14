@@ -18,6 +18,11 @@ This bash script was created to be used in Azure DevOps because there is no way 
  
  * GUI designer
  
+ ![Alt text](documentation-image/bash.png)
+ 
+ variables
+ ![Alt text](documentation-image/variables.png)
+ 
 ### Jenkins
 It was tested in jenkins to check the rigth operation in a CI server different to Azure Devops.
 
@@ -47,9 +52,23 @@ Sonar server name used for the analysis
 * $(reportTask)
 File create by sonar-scanner at moment of analysis; normally is __.scannerwork/report-task.txt__ and its location is in the project root
 
-**full example:**
+**Execution example:**
  ```shell
 ./quality-gates-checker.sh my_token_here sonarcloud.io /home/carlosdeveloper10/aws_face_auth/.scannerwork/report-task.txt
  ```
  
  
+## Result examples
+* **_When quality gates fail on Azure DevOps_**
+
+ ![Alt text](documentation-image/fail.png)
+ 
+ 
+* **_When quality gates pass on Azure DevOps_**
+
+ ![Alt text](documentation-image/Ok.png)
+ 
+ 
+* **_jenkins_**
+
+![Alt text](documentation-image/jenkis.png)
